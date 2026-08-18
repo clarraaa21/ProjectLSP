@@ -1,0 +1,15 @@
+# Config sensitif
+config/db.php.bak
+
+# File sistem
+.DS_Store
+Thumbs.db
+
+# Upload sementara
+uploads/tickets/*
+!uploads/tickets/.gitkeep
+exports/*
+!exports/.gitkeep
+
+# Log
+*.log

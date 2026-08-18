@@ -1,0 +1,14 @@
+RewriteEngine On
+
+# Redirect ke HTTPS (aktifkan jika hosting sudah punya SSL)
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Cegah akses langsung ke folder vendor & config
+RewriteRule ^vendor/ - [F,L]
+RewriteRule ^config/ - [F,L]
+
+# Custom error page (opsional)
+ErrorDocument 404 /index.php
+
+Options -Indexes
